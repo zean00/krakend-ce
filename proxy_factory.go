@@ -8,6 +8,7 @@ import (
 	opencensus "github.com/devopsfaith/krakend-opencensus"
 	"github.com/devopsfaith/krakend/logging"
 	"github.com/devopsfaith/krakend/proxy"
+	jwtx "github.com/zean00/jwtextract"
 )
 
 // NewProxyFactory returns a new ProxyFactory wrapping the injected BackendFactory with the default proxy stack and a metrics collector
@@ -19,6 +20,7 @@ func NewProxyFactory(logger logging.Logger, backendFactory proxy.BackendFactory,
 	proxyFactory = lua.ProxyFactory(logger, proxyFactory)
 	proxyFactory = metricCollector.ProxyFactory("pipe", proxyFactory)
 	proxyFactory = opencensus.ProxyFactory(proxyFactory)
+	proxyFactory = jwtx.ProxyFactory(logger, proxyFactory)
 	return proxyFactory
 }
 

@@ -50,8 +50,7 @@ all: test
 
 build:
 	@echo "Building the binary..."
-	@GOPROXY=https://goproxy.io go get .
-	@go build -ldflags="-X github.com/devopsfaith/krakend/core.KrakendVersion=${VERSION}" -o ${BIN_NAME} ./cmd/krakend-ce
+	@env GO111MODULE=on go build -mod=vendor -ldflags="-X github.com/devopsfaith/krakend/core.KrakendVersion=${VERSION}" -o ${BIN_NAME} ./cmd/krakend-ce
 	@echo "You can now use ./${BIN_NAME}"
 
 test: build
@@ -61,10 +60,10 @@ docker_build:
 	docker run --rm -it -v "${PWD}:/app" -w /app golang:${GOLANG_VERSION} make build
 
 krakend_docker: docker_build
-	docker build -t devopsfaith/krakend:${VERSION} .
+	docker build -t genesix/krakend:${VERSION} .
 
 krakend_docker_alpine:
-	docker build -t devopsfaith/krakend:${VERSION}-alpine -f Dockerfile.alpine .
+	docker build -t genesix/krakend:${VERSION}-alpine -f Dockerfile.alpine .
 
 tgz: builder/skel/tgz/usr/bin/krakend
 tgz: builder/skel/tgz/etc/krakend/krakend.json

@@ -1,8 +1,6 @@
-FROM golang:1.14.0-alpine3.11 as builder
+FROM genesix/golang-build as builder
 
 WORKDIR /app
-
-RUN apk add --no-cache make curl git build-base
 
 COPY . .
 
