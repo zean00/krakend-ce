@@ -751,8 +751,8 @@ github.com/yudai/golcs v0.0.0-20170316035057-ecda9a501e82/go.mod h1:lgjkn3NuSvDf
 github.com/yudai/pp v2.0.1+incompatible/go.mod h1:PuxR/8QJ7cyCkFp/aUDS+JY727OFEZkTdatxwunjIkc=
 github.com/yuin/gopher-lua v0.0.0-20190206043414-8bfc7677f583 h1:SZPG5w7Qxq7bMcMVl6e3Ht2X7f+AAGQdzjkbyOnNNZ8=
 github.com/yuin/gopher-lua v0.0.0-20190206043414-8bfc7677f583/go.mod h1:gqRgreBUhTSL0GeU64rtZ3Uq3wtjOa/TB2YfrtkCbVQ=
-github.com/zean00/jwtextract v0.0.0-20200630032254-bfc525028db5 h1:lGH7c1DiYyiiEOCnNf6tr2T3kqml4+veT2ZeLV2eow0=
-github.com/zean00/jwtextract v0.0.0-20200630032254-bfc525028db5/go.mod h1:QXsw7A9unGGEOtCFHI9ewcQ9t3KsZUaBUfn6oR4tyAY=
+github.com/zean00/jwtextract v0.0.0-20200720140118-70652cbc70dd h1:nU1fcaWqONA6qVIx+IS7GM1NAAu4p4sEbNUUnf10JCM=
+github.com/zean00/jwtextract v0.0.0-20200720140118-70652cbc70dd/go.mod h1:QXsw7A9unGGEOtCFHI9ewcQ9t3KsZUaBUfn6oR4tyAY=
 go.opencensus.io v0.15.0/go.mod h1:UffZAU+4sDEINUGP/B7UfBBkq4fqLu9zXAX7ke6CHW0=
 go.opencensus.io v0.19.1/go.mod h1:gug0GbSHa8Pafr0d2urOSgoXHZ6x/RUlaiT0d9pqb4A=
 go.opencensus.io v0.20.1/go.mod h1:6WKK9ahsWS3RSO+PY9ZHZUfv2irvY6gN279GOPZjmmk=

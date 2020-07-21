@@ -17,26 +17,28 @@
       {
         "endpoint": "/head",
         "method": "GET",
-        "extra_config": {
-          "github_com/zean00/jwtextract": {
-           
-         }
-        },
         "output_encoding": "no-op",
         "concurrent_calls": 1,
-        "headers_to_pass": [
-          "*"
-        ],
-        "querystring_params": [],
+        "headers_to_pass": ["*"],
+        "querystring_params": ["*"],
+        "extra_config": {
+          "github_com/zean00/jwtextract": {
+            "extract_all" : false,
+            "claim_map" : {
+              "customer" : "subject",
+              "account" : "account",
+              "userid" : "phone_number"
+            }
+         }
+        },
         "backend": [
           {
             "method": "GET",
-            "host": [ "http://localhost:8080" ],
-            "url_pattern": "/head",
-            "disable_host_sanitize": false,
+            "host": [ "http://localhost:8000" ],
+            "url_pattern": "/__debug/optional",
+            "disable_host_sanitize": true,
             "encoding": "no-op",
-            "sd": "static",
-            "extra_config": {}
+            "sd": "static"
           }
         ]
       }
