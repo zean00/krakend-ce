@@ -41,6 +41,30 @@
             "sd": "static"
           }
         ]
+      },
+      {
+        "endpoint": "/user/data",
+        "method": "GET",
+        "output_encoding": "no-op",
+        "concurrent_calls": 1,
+        "headers_to_pass": ["*"],
+        "querystring_params": ["*"],
+        "extra_config": {
+          "github_com/zean00/kropa": {
+            "service_address" : "http://localhost:8181",
+            "package_name" : "dreams.user"
+         }
+        },
+        "backend": [
+          {
+            "method": "GET",
+            "host": [ "http://localhost:8080" ],
+            "url_pattern": "/user/data",
+            "disable_host_sanitize": true,
+            "encoding": "no-op",
+            "sd": "static"
+          }
+        ]
       }
     ]
   }
