@@ -741,6 +741,8 @@ github.com/zean00/krakend v1.1.2-0.20200928230815-7b88dd197663 h1:kMstfkbBFcELYO
 github.com/zean00/krakend v1.1.2-0.20200928230815-7b88dd197663/go.mod h1:b8i/JCI1/iFjg7w9tvg3QFpT5Tc6Qy/75nj+i5dhPCA=
 github.com/zean00/kropa v0.0.0-20200928231542-28508212fb32 h1:GfcBvijCaNt0RVghGMh/zHG3P71sKd3Ckwb4P+IFcDE=
 github.com/zean00/kropa v0.0.0-20200928231542-28508212fb32/go.mod h1:dDdHe1vmFseyXJuScpAqxFKf7XUM10wMjClQLdkoSUw=
+github.com/zean00/kropa v0.0.0-20200929020421-140532762140 h1:U93mcS4YgfMK4pZTJs5FBNAOlHqYpskZCCcdQMSfrjo=
+github.com/zean00/kropa v0.0.0-20200929020421-140532762140/go.mod h1:dDdHe1vmFseyXJuScpAqxFKf7XUM10wMjClQLdkoSUw=
 go.opencensus.io v0.15.0/go.mod h1:UffZAU+4sDEINUGP/B7UfBBkq4fqLu9zXAX7ke6CHW0=
 go.opencensus.io v0.19.1/go.mod h1:gug0GbSHa8Pafr0d2urOSgoXHZ6x/RUlaiT0d9pqb4A=
 go.opencensus.io v0.20.1/go.mod h1:6WKK9ahsWS3RSO+PY9ZHZUfv2irvY6gN279GOPZjmmk=
