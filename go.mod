@@ -41,26 +41,30 @@ require (
 	github.com/devopsfaith/krakend-usage v0.0.0-20181025134340-476779c0a36c
 	github.com/devopsfaith/krakend-viper v0.0.0-20200605164302-854fa4ff4a66
 	github.com/devopsfaith/krakend-xml v0.0.0-20190713155104-2cd38185308f
-	github.com/gin-gonic/gin v1.5.0
+	github.com/gin-gonic/gin v1.6.3
 	github.com/go-contrib/uuid v1.2.0
+	github.com/go-playground/validator/v10 v10.4.0 // indirect
+	github.com/golang/protobuf v1.4.2 // indirect
 	github.com/google/btree v1.0.0 // indirect
 	github.com/google/cel-go v0.2.0 // indirect
 	github.com/gorilla/websocket v1.4.0 // indirect
 	github.com/gregjones/httpcache v0.0.0-20190611155906-901d90724c79 // indirect
 	github.com/grpc-ecosystem/go-grpc-middleware v1.0.0 // indirect
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0 // indirect
-	github.com/hashicorp/go-msgpack v0.5.3 // indirect
 	github.com/hashicorp/go-rootcerts v1.0.0 // indirect
 	github.com/hashicorp/go-sockaddr v1.0.1 // indirect
 	github.com/hashicorp/go-uuid v1.0.1 // indirect
 	github.com/influxdata/influxdb v1.7.4 // indirect
 	github.com/influxdata/platform v0.0.0-20190117200541-d500d3cf5589 // indirect
 	github.com/jonboulle/clockwork v0.1.0 // indirect
+	github.com/json-iterator/go v1.1.10 // indirect
 	github.com/kpacha/opencensus-influxdb v0.0.0-20181102202715-663e2683a27c // indirect
 	github.com/letgoapp/krakend-consul v0.0.0-20190130102841-7623a4da32a1 // indirect
 	github.com/letgoapp/krakend-influx v0.0.0-20190214142340-d2fc9466bb3a
 	github.com/mmcdole/gofeed v1.0.0-beta2 // indirect
 	github.com/mmcdole/goxpp v0.0.0-20170720115402-77e4a51a73ed // indirect
+	github.com/nats-io/jwt v1.0.1 // indirect
+	github.com/nats-io/nkeys v0.2.0 // indirect
 	github.com/op/go-logging v0.0.0-20160315200505-970db520ece7 // indirect
 	github.com/sirupsen/logrus v1.3.0 // indirect
 	github.com/soheilhy/cmux v0.1.4 // indirect
@@ -73,11 +77,17 @@ require (
 	github.com/tmthrgd/go-hex v0.0.0-20180828131331-d1fb3dbb16a1 // indirect
 	github.com/tmthrgd/go-memset v0.0.0-20180828131805-6f4e59bf1e1d // indirect
 	github.com/tmthrgd/go-popcount v0.0.0-20180111143836-3918361d3e97 // indirect
+	github.com/ugorji/go v1.1.10 // indirect
 	github.com/unrolled/secure v0.0.0-20171102162350-0f73fc7feba6 // indirect
 	github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2 // indirect
-	github.com/zean00/jwtextract v0.0.0-20200720140118-70652cbc70dd
-	github.com/zean00/kropa v0.0.0-20200929115648-6ce84c66711e
+	github.com/zean00/jwtextract v0.0.0-20201003030703-94470273201d
+	github.com/zean00/krakend-authcopy v0.0.0-20201005133130-213bb36e5b40
+	github.com/zean00/krakend-lognats v0.0.0-20201003082054-0c7595a54621
+	github.com/zean00/kropa v0.0.0-20201002221637-5181be0493d2
+	golang.org/x/crypto v0.0.0-20201002170205-7f63de1d35b0 // indirect
+	golang.org/x/sys v0.0.0-20201005065044-765f4ea38db3 // indirect
 	gopkg.in/Graylog2/go-gelf.v2 v2.0.0-20180326133423-4dbb9d721348 // indirect
+	gopkg.in/yaml.v2 v2.3.0 // indirect
 )
 
 replace github.com/devopsfaith/krakend => github.com/zean00/krakend v1.1.2-0.20200928230815-7b88dd197663

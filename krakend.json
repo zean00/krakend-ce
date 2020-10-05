@@ -6,6 +6,14 @@
         "prefix": "[KRAKEND]",
         "syslog": false,
         "stdout": true
+      },
+      "github_com/zean00/lognats" : {
+        "nats_url" : "nats://localhost:4223",
+        "nats_cluster" : "test-cluster",
+        "client_name" : "krakend",
+        "event_name" : "apigw.request",
+        "log_payload" : true,
+        "log_header" : true
       }
     },
     "timeout": "3000ms",
@@ -34,8 +42,8 @@
         "backend": [
           {
             "method": "GET",
-            "host": [ "http://localhost:8000" ],
-            "url_pattern": "/__debug/optional",
+            "host": [ "http://localhost:8080" ],
+            "url_pattern": "/head",
             "disable_host_sanitize": true,
             "encoding": "no-op",
             "sd": "static"
@@ -60,6 +68,24 @@
             "method": "GET",
             "host": [ "http://localhost:8080" ],
             "url_pattern": "/user/data",
+            "disable_host_sanitize": true,
+            "encoding": "no-op",
+            "sd": "static"
+          }
+        ]
+      },
+      {
+        "endpoint": "/data",
+        "method": "POST",
+        "output_encoding": "no-op",
+        "concurrent_calls": 1,
+        "headers_to_pass": ["*"],
+        "querystring_params": ["*"],
+        "backend": [
+          {
+            "method": "POST",
+            "host": [ "http://localhost:8080" ],
+            "url_pattern": "/head",
             "disable_host_sanitize": true,
             "encoding": "no-op",
             "sd": "static"

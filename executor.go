@@ -8,11 +8,11 @@ import (
 
 	krakendbf "github.com/devopsfaith/bloomfilter/krakend"
 	cel "github.com/devopsfaith/krakend-cel"
-	"github.com/devopsfaith/krakend-cobra"
+	cmd "github.com/devopsfaith/krakend-cobra"
 	cors "github.com/devopsfaith/krakend-cors/gin"
 	gelf "github.com/devopsfaith/krakend-gelf"
-	"github.com/devopsfaith/krakend-gologging"
-	"github.com/devopsfaith/krakend-jose"
+	gologging "github.com/devopsfaith/krakend-gologging"
+	jose "github.com/devopsfaith/krakend-jose"
 	logstash "github.com/devopsfaith/krakend-logstash"
 	metrics "github.com/devopsfaith/krakend-metrics/gin"
 	opencensus "github.com/devopsfaith/krakend-opencensus"
@@ -33,7 +33,9 @@ import (
 	server "github.com/devopsfaith/krakend/transport/http/server/plugin"
 	"github.com/gin-gonic/gin"
 	"github.com/go-contrib/uuid"
-	"github.com/letgoapp/krakend-influx"
+	influxdb "github.com/letgoapp/krakend-influx"
+	authcopy "github.com/zean00/krakend-authcopy"
+	lognats "github.com/zean00/krakend-lognats"
 )
 
 // NewExecutor returns an executor for the cmd package. The executor initalizes the entire gateway by
@@ -140,6 +142,13 @@ func (e *ExecutorBuilder) NewCmdExecutor(ctx context.Context) cmd.Executor {
 		if err != nil {
 			logger.Warning("bloomFilter:", err.Error())
 		}
+
+		if e.Middlewares == nil {
+			e.Middlewares = make([]gin.HandlerFunc, 0)
+		}
+
+		e.Middlewares = append(e.Middlewares, authcopy.New(logger, cfg.ExtraConfig))
+		e.Middlewares = append(e.Middlewares, lognats.New(logger, cfg.ExtraConfig))
 
 		// setup the krakend router
 		routerFactory := router.NewFactory(router.Config{
